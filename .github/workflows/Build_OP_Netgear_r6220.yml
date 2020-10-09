@@ -65,12 +65,7 @@ jobs:
     - name: Update & Install feeds
       working-directory: ./openwrt
       run: |
-        mkdir -p package/custom && cd package/custom
-        src-git helloworld https://github.com/fw876/helloworld
-        src-git jerryk https://github.com/jerrykuku/openwrt-package
-        src-git lienol https://github.com/Lienol/openwrt-package
-        src-git infinityfreedom https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git
-        cd ../../
+        
         ./scripts/feeds update -a
         ./scripts/feeds install -a
     - name: Configuration Customization - Build_Netgear_r6220.config
