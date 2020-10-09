@@ -68,7 +68,7 @@ jobs:
         
         ./scripts/feeds update -a
         ./scripts/feeds install -a
-    - name: Configuration Customization - Build_Netgear_r6220.config
+    - name: Configuration Customization - Build_Netgear_r6220
       env:
         CONFIG_FILE: 'Netgear_r6220.config'
       run: |
